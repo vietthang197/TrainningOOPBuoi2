@@ -19,4 +19,11 @@ public class Rectangle extends Shape {
     public String toString() {
         return "Rectangle : pivot( x:"+pivotX+", y: "+pivotY+"), color : "+color+", width : "+width+", height : "+height;
     }
+
+    public boolean isRectangle(){
+        if(width < height && width > 0 && height >0){
+            return false;
+        }
+        return true;
+    }
 }

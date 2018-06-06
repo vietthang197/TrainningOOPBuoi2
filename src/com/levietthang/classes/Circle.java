@@ -17,4 +17,11 @@ public class Circle extends Shape{
     public String toString() {
         return "Circle : pivot( x:"+pivotX+", y: "+pivotY+"), color : "+color+", radius : "+radius;
     }
+
+    public boolean isCircle(){
+        if(radius <0){
+            return false;
+        }
+        return true;
+    }
 }

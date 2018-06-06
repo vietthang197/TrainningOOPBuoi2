@@ -20,4 +20,9 @@ public class Triangle extends Shape{
     public String toString() {
         return "Triangle : pivot( x:"+pivotX+", y: "+pivotY+"), color : "+color+", a : "+a+", b : "+b+", c : "+c;
     }
+
+    public boolean isTriangle(){
+        if( a < 0 && b < 0 && c < 0 && a+b <= c && c+b <= a && a+c <= b) return false;
+        return true;
+    }
 }

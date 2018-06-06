@@ -21,6 +21,7 @@ public class MainTest {
             System.out.println("4. Xuất danh sách các hình");
             System.out.println("5. Số lượng các hình");
             System.out.println("6. Diện tích lớn nhất của các hình theo từng loại");
+            System.out.println("7. Thoát");
             System.out.println("");
             System.out.println("-------------------------------------------------------------");
 
@@ -36,7 +37,12 @@ public class MainTest {
                     String color = scanner.nextLine();
                     System.out.println("Nhập bán kính :");
                     float radius = scanner.nextFloat();
-                    listShape.add(new Circle(x, y, color, radius));
+                    Circle circle = new Circle(x, y, color, radius);
+                    if(circle.isCircle()){
+                        listShape.add(circle);
+                    }else{
+                        System.out.println("Thông số của hình tròn không hợp lệ, vui lòng nhập lại!");
+                    }
                     System.out.println("********************");
                     break;
                 case 2 :
@@ -51,7 +57,12 @@ public class MainTest {
                     float width = scanner.nextFloat();
                     System.out.println("Nhập chiều rộng :");
                     float height = scanner.nextFloat();
-                    listShape.add(new Rectangle(x1, y1, color1, width, height));
+                    Rectangle rectangle = new Rectangle(x1, y1, color1, width, height);
+                    if(rectangle.isRectangle()){
+                        listShape.add(rectangle);
+                    }else{
+                        System.out.println("Thông số hình chữ nhật không hợp lệ, vui lòng nhập lại!");
+                    }
                     System.out.println("********************");
                     break;
                 case 3 :
@@ -68,7 +79,12 @@ public class MainTest {
                     float b = scanner.nextFloat();
                     System.out.println("Nhập cạnh c :");
                     float c = scanner.nextFloat();
-                    listShape.add(new Triangle(x2, y2, color2, a, b, c));
+                    Triangle triangle = new Triangle(x2, y2, color2, a, b, c);
+                    if(triangle.isTriangle()){
+                        listShape.add(triangle);
+                    }else{
+                        System.out.println("Thông số hình tam giác không hợp lệ, vui lòng nhập lại!");
+                    }
                     System.out.println("********************");
                     break;
                 case 4:
@@ -136,6 +152,9 @@ public class MainTest {
                     System.out.println("********************");
                     break;
 
+                case 7:
+                    System.exit(0);
+                    break;
             }
         }
     }
