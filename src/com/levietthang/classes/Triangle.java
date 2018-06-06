@@ -18,7 +18,7 @@ public class Triangle extends Shape{
 
     @Override
     public String toString() {
-        return "Triangle : pivot( x:"+pivotX+", y: "+pivotY+"), color : "+color+", a : "+a+", b : "+b+", c : "+c;
+        return "Triangle : pivot( x:"+pivotX+", y: "+pivotY+"), color : "+color+", a : "+a+", b : "+b+", c : "+c+", area : "+area();
     }
 
     public boolean isTriangle(){

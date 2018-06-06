@@ -17,7 +17,7 @@ public class Rectangle extends Shape {
 
     @Override
     public String toString() {
-        return "Rectangle : pivot( x:"+pivotX+", y: "+pivotY+"), color : "+color+", width : "+width+", height : "+height;
+        return "Rectangle : pivot( x:"+pivotX+", y: "+pivotY+"), color : "+color+", width : "+width+", height : "+height+" area :"+area();
     }
 
     public boolean isRectangle(){

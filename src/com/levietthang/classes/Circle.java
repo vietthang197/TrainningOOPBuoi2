@@ -15,7 +15,7 @@ public class Circle extends Shape{
 
     @Override
     public String toString() {
-        return "Circle : pivot( x:"+pivotX+", y: "+pivotY+"), color : "+color+", radius : "+radius;
+        return "Circle : pivot( x:"+pivotX+", y: "+pivotY+"), color : "+color+", radius : "+radius+" , area : "+area();
     }
 
     public boolean isCircle(){
